@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+    <style>
+      #d{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border: 1px solid #000;
+        z-index: 10;
+        top: 40%;
+        left: 40%;
+      }
+      #arjsDebugUIContainer{
+        display: none;
+      }
+      .a-enter-vr{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a-scene >
+      <a-plane  position="-1 0.5 -3" rotation="0 45 0" background="rgba(0,0,0,0.6)" >
+        <img src="Koala.jpg" >
+      </a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+      </a-scene> -->
+    <!-- a-scene>
+      <a-box src='magic-book.mp4' position="-1 0.5 -3" rotation="0 45 0" ></a-box>
+      <a-sphere  position="0 1.25 -5" radius="1.25"></a-sphere>
+      <a-cylinder  position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane src='logojs.png' position="0 0 -4" rotation="-90 0 0" width="4" height="4" ></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene> -->
+     <a-scene embedd arjs='sourceType: webcam;'>
+      <a-marker preset="hiro">
+        <a-plane src="./Koala.jpg" autoplay='false' position='0 -10 0' rotation='0 0 0' width="6" height="3"></a-plane>
+      </a-marker>
+    </a-scene>
+    <!-- <div id="d"></div> -->
+  </body>
+</html>
